@@ -1,0 +1,219 @@
+{
+  "id": "level1",
+  "name": "City Streets",
+  "width": 2400,
+  "height": 600,
+  "backgroundColor": "#1a1a2e",
+  
+  "tileset": {
+    "name": "urban",
+    "image": "assets/tilesets/urban.png",
+    "tileSize": 32
+  },
+  
+  "background": {
+    "layers": [
+      {
+        "image": "assets/backgrounds/city_far.png",
+        "scrollSpeed": 0.2
+      },
+      {
+        "image": "assets/backgrounds/city_mid.png",
+        "scrollSpeed": 0.5
+      },
+      {
+        "image": "assets/backgrounds/city_near.png",
+        "scrollSpeed": 0.8
+      }
+    ]
+  },
+  
+  "zones": [
+    {
+      "type": "start",
+      "x": 100,
+      "y": 300,
+      "width": 200,
+      "height": 200,
+      "color": "#00ff00"
+    },
+    {
+      "type": "exit",
+      "x": 2100,
+      "y": 300,
+      "width": 200,
+      "height": 200,
+      "color": "#0088ff"
+    }
+  ],
+  
+  "platforms": [
+    {
+      "x": 0,
+      "y": 500,
+      "width": 2400,
+      "height": 32,
+      "type": "ground"
+    },
+    {
+      "x": 800,
+      "y": 350,
+      "width": 200,
+      "height": 32,
+      "type": "platform"
+    },
+    {
+      "x": 1400,
+      "y": 300,
+      "width": 150,
+      "height": 32,
+      "type": "platform"
+    }
+  ],
+  
+  "ladders": [
+    {
+      "x": 750,
+      "y": 350,
+      "height": 150
+    },
+    {
+      "x": 1350,
+      "y": 300,
+      "height": 200
+    }
+  ],
+  
+  "enemies": [
+    {
+      "type": "grunt",
+      "x": 500,
+      "y": 400,
+      "spawnDelay": 0
+    },
+    {
+      "type": "grunt",
+      "x": 600,
+      "y": 450,
+      "spawnDelay": 1.5
+    },
+    {
+      "type": "grunt",
+      "x": 1000,
+      "y": 420,
+      "spawnDelay": 0
+    },
+    {
+      "type": "grunt",
+      "x": 1100,
+      "y": 380,
+      "spawnDelay": 2
+    },
+    {
+      "type": "grunt",
+      "x": 850,
+      "y": 330,
+      "spawnDelay": 0,
+      "comment": "Platform enemy"
+    },
+    {
+      "type": "grunt",
+      "x": 1600,
+      "y": 400,
+      "spawnDelay": 0
+    },
+    {
+      "type": "grunt",
+      "x": 1700,
+      "y": 450,
+      "spawnDelay": 1
+    },
+    {
+      "type": "grunt",
+      "x": 1800,
+      "y": 420,
+      "spawnDelay": 2
+    }
+  ],
+  
+  "items": [
+    {
+      "type": "health",
+      "x": 400,
+      "y": 470
+    },
+    {
+      "type": "coin",
+      "x": 650,
+      "y": 460
+    },
+    {
+      "type": "coin",
+      "x": 850,
+      "y": 320,
+      "comment": "Platform reward"
+    },
+    {
+      "type": "coin",
+      "x": 900,
+      "y": 320
+    },
+    {
+      "type": "health",
+      "x": 1200,
+      "y": 470
+    },
+    {
+      "type": "coin",
+      "x": 1450,
+      "y": 270,
+      "comment": "High platform reward"
+    },
+    {
+      "type": "health",
+      "x": 1900,
+      "y": 470
+    }
+  ],
+  
+  "props": [
+    {
+      "type": "barrel",
+      "x": 900,
+      "y": 470,
+      "destructible": true,
+      "contains": "coin"
+    },
+    {
+      "type": "crate",
+      "x": 1300,
+      "y": 470,
+      "destructible": true,
+      "contains": "health"
+    }
+  ],
+  
+  "camera": {
+    "scrollType": "follow",
+    "bounds": {
+      "minX": 0,
+      "maxX": 2400,
+      "minY": 0,
+      "maxY": 600
+    },
+    "deadzone": {
+      "width": 400,
+      "height": 200
+    }
+  },
+  
+  "music": "assets/audio/level1_theme.mp3",
+  
+  "ambience": [
+    {
+      "sound": "assets/audio/city_traffic.mp3",
+      "volume": 0.3,
+      "loop": true
+    }
+  ]
+}
